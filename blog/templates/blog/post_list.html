@@ -6,18 +6,19 @@
   </head>
   <body>
     <div class="">
-      <p>pubished 03.12.2020, 19:45</p>
-      <p>the year of corona</p>
-      <h1>My first post</h1>
+      <p><em>pubished 03.12.2020, 19:45</em></br>
+      the year of corona</p>
+      <h1>My first Blog</h1>
       <p>let the  game beginn</p>
     </div>
+    {% for Post in posts %}
     <div class="">
-      <p>pubished 03.12.2020, 19:46</p>
-      <p>the year of corona</p>
-      <h1>Einen wunderschönen Tag, Freund Schnürschuh!</h1>
-      <p>Es scheint zu funktionieren!</p>  <br>
-      <em>Es ist noch nicht das Ende!</em>
+      <p><em>published: {{ Post.published_date }}</em></p>
+      <h2><a href="">{{ Post.titel }}</a></h2>
+      <p>{{ Post.text|linebreaksbr }}</p>
     </div>
+      {% endfor %}
+
 
   </body>
 </html>
